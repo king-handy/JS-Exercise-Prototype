@@ -39,8 +39,11 @@ function Airplane(name) {
           + It should return a string with `name` and `age`. Example: "Mary, 50"
   */
   
- function Person() {
-    
+ function Person(name, age) {
+    let stomach = [];
+    let eat = Person.eat();
+    let poop = Person.poop();
+    let string = Person.toString();
   }
  
  
