@@ -49,7 +49,6 @@ function Person(name, age) {
     if (this.stomach.length < 10){
       this.stomach.push(someFood);
     }
-    
   };
 
   Person.prototype.poop = function() {
