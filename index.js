@@ -39,17 +39,25 @@ function Airplane(name) {
           + It should return a string with `name` and `age`. Example: "Mary, 50"
   */
   
- function Person(name, age) {
-    let stomach = [];
-    let eat = Person.eat();
-    let poop = Person.poop();
-    let string = Person.toString();
-  }
+function Person(name, age) {
+  this.stomach = [];
+}
  
- 
+  Person.prototype.eat = function (){
+    this.eat = function{
+      
+    }
 
-  
-  
+  };
+
+  Person.prototype.poop = function (){
+    this.stomach = stomach.splice(0, );
+  };
+
+  // Person.prototype.toString(name, age) {
+    
+  // };
+  // Person('Mary', 50);
   
   
   /*
@@ -66,8 +74,9 @@ function Airplane(name) {
           + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
   */
   
- function Car() {
-    
+ function Car(model, milesPerGallon) {
+    this.tank = 0;
+    this.odometer = 0;
   }
   
   
@@ -78,18 +87,19 @@ function Airplane(name) {
       - Besides the methods on Person.prototype, babies have the ability to `.play()`:
           + Should return a string "Playing with x", x being the favorite toy.
   */
- function Baby() {
+ function Baby(Person) {
    
   }
- 
+  
+  Baby.prototype = Object.create(Person.prototype);
   
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
-    1. 
-    2. 
-    3. 
-    4. 
+    1. This refers to an object.
+    2. This refers to the owner of a method.
+    3. This can be modified with bind() to set the value regardless of how it is called.
+    4. This can refer to the global object.
   */
   
   
